@@ -16,7 +16,7 @@ class IslamiiApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         HomeScreen.routeName: (_) => HomeScreen(),
-        // SuraDetailsScreen.routeName: (_) => SuraDetailsScreen(),
+        SuraDetailsScreen.routeName: (_) => SuraDetailsScreen(),
         // HadethDetailsScreen.routeName: (context) => HadethDetailsScreen(),
       },
       initialRoute: HomeScreen.routeName,

@@ -21,9 +21,15 @@ class AppTheme {
             color: black,
           )),
       textTheme: TextTheme(
-          headlineSmall: TextStyle(
-        fontSize: 25,
-        fontWeight: FontWeight.w400,
-        color: black,
-      )));
+        headlineSmall: TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.w400,
+          color: black,
+        ),
+        titleLarge: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
+          color: black,
+        ),
+      ));
 }

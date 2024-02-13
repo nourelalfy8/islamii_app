@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamii_app/app_theme.dart';
 import 'package:islamii_app/tabs/quran/sura_details_screen.dart';
 
 class QuranTab extends StatelessWidget {
@@ -127,22 +128,41 @@ class QuranTab extends StatelessWidget {
         SizedBox(
           height: 16,
         ),
-        // Expanded(
-        //     child: ListView.separated(
-        //   itemBuilder: (context, index) => InkWell(
-        //       onTap: () {
-        //         Navigator.of(context).pushNamed(SuraDetailsScreen.routeName,
-        //             arguments: SuraDetailsArgs(index, suraNames[index]));
-        //       },
-        //       child: Text(
-        //         suraNames[index],
-        //         style: Theme.of(context).textTheme.headlineSmall,
-        //       )),
-        //   itemCount: suraNames.length,
-        //   separatorBuilder: (context, index) => SizedBox(
-        //     height: 8,
-        //   ),
-        // ))
+        Divider(
+          color: AppTheme.primaryLight,
+          thickness: 3,
+        ),
+        Row(
+          children: [
+            Text(
+              'عدد الأيات',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            Text('اسم السورة',
+                style: Theme.of(context).textTheme.headlineSmall),
+          ],
+        ),
+        Divider(
+          color: AppTheme.primaryLight,
+          thickness: 3,
+        ),
+        Expanded(
+            child: ListView.separated(
+          itemBuilder: (context, index) => InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(SuraDetailsScreen.routeName,
+                    arguments: SuraDetailsArgs(index, suraNames[index]));
+              },
+              child: Text(
+                suraNames[index],
+                style: Theme.of(context).textTheme.headlineSmall,
+                textAlign: TextAlign.center,
+              )),
+          itemCount: suraNames.length,
+          separatorBuilder: (context, index) => SizedBox(
+            height: 8,
+          ),
+        ))
       ],
     );
   }

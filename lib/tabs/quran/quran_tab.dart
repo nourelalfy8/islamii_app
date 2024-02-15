@@ -127,22 +127,22 @@ class QuranTab extends StatelessWidget {
         SizedBox(
           height: 16,
         ),
-        // Expanded(
-        //     child: ListView.separated(
-        //   itemBuilder: (context, index) => InkWell(
-        //       onTap: () {
-        //         Navigator.of(context).pushNamed(SuraDetailsScreen.routeName,
-        //             arguments: SuraDetailsArgs(index, suraNames[index]));
-        //       },
-        //       child: Text(
-        //         suraNames[index],
-        //         style: Theme.of(context).textTheme.headlineSmall,
-        //       )),
-        //   itemCount: suraNames.length,
-        //   separatorBuilder: (context, index) => SizedBox(
-        //     height: 8,
-        //   ),
-        // ))
+        Expanded(
+            child: ListView.separated(
+          itemBuilder: (context, index) => InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(SuraDetailsScreen.routeName,
+                    arguments: SuraDetailsArgs(index, suraNames[index]));
+              },
+              child: Text(
+                suraNames[index],
+                style: Theme.of(context).textTheme.headlineSmall,
+              )),
+          itemCount: suraNames.length,
+          separatorBuilder: (context, index) => SizedBox(
+            height: 8,
+          ),
+        ))
       ],
     );
   }

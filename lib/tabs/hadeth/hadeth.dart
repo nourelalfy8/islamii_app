@@ -1,5 +1,5 @@
-// class hadeth {
-//   String title;
-//   List<String> content;
-//   hadeth(this.title, this.content);
-// }
+class Hadeth {
+  String title;
+  List<String> content;
+  Hadeth(this.title, this.content);
+}
